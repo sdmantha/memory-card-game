@@ -1,24 +1,49 @@
-const selectors={
-    boardContainer: document.querySelector('.container'),
-    board: document.querySelector('.board'),
-    moves: document.querySelector('.moves'),
-    timer: document.querySelector('.timer'),
-    start: document.querySelector('.button'),
-    win: document.querySelector('.win')
-}
-const newGame={
-    gameStarted: false,
-    flippedCards: 0,
-    totalFlips:0,
-    totalTime: 0,
-    loop: null
+// const cards = document.querySelectorAll('.memory-card');
+
+// let hasFlippedCard = false;
+// let firstCard, secondCard;
+
+// function flipCard() {
+//   this.classList.add('flip');
+
+//   if (!hasFlippedCard) {
+//     hasFlippedCard = true;
+//     firstCard = this;
+//    return;
+//  }
+
+//  secondCard = this;
+//  hasFlippedCard = false;
+
+//  checkForMatch();
+// }
+
+// function checkForMatch() {
+//  if (firstCard.dataset.framework === secondCard.dataset.framework) {
+//    disableCards();
+//    return;
+//  }
+
+//  unflipCards();
+// }
+
+// function disableCards() {
+//  firstCard.removeEventListener('click', flipCard);
+//  secondCard.removeEventListener('click', flipCard);
+// }
+
+// function unflipCards() {
+//  setTimeout(() => {
+//    firstCard.classList.remove('flip');
+//    secondCard.classList.remove('flip');
+//  }, 1500);
+// }
+
+//   cards.forEach(card => card.addEventListener('click', flipCard));
+const cards = document.querySelectorAll('.card');
+
+function flipCard() {
+  this.classList.toggle('flip');
 }
 
-const createGame =()=>{
-    const dimensions = selector.board.getAttribute('data-dimernsion')
-
-    if(dimensions % 2 !==0){
-        throw new Error('The dimension of the game must be even.')
-    }
-const img=['flower.1','flower.2']
-}
+cards.forEach(card => card.addEventListener('click', flipCard));

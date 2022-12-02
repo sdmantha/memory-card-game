@@ -44,10 +44,12 @@ h1{
     grid-row-gap: 20px;
     padding: 30px 30px ;
     border-radius: 38px;
+    perspective: 1000px; 
            }
 
 
-  .card{
+
+.card{
     background-color:#333;
     padding:30px;
     border-radius:10px;
@@ -56,7 +58,34 @@ h1{
     justify-content:center;
     height: 200px;
     width: 200;
-        }
+    transform: scale(1); 
+    transform-style: preserve-3d;
+    transition: transform .5s;
+     
+  }
+
+.back-face, .front-face{
+    position: absolute;
+    backface-visibility: hidden;
+    
+   }
+
+
+  .card:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+  }
+
+
+  .card.flip{
+    transform: rotateY(180deg);
+  }
+
+
+   
+  .front-face{
+    transform: rotateY(180deg);
+  }
 
 
   img{
