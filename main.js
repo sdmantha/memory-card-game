@@ -43,6 +43,10 @@
 
 
 const cards = document.querySelectorAll('.card');
+const playerLifeCount= document.querySelector("span")
+let playerLives= 20;
+
+playerLifeCount.textContent= playerLives;
 
   let hasFlippedCard = false;
   let firstCard, secondCard;
@@ -79,9 +83,16 @@ const cards = document.querySelectorAll('.card');
    setTimeout(() => {
      firstCard.classList.remove('flip');
      secondCard.classList.remove('flip');
-     
-   }, 1500);
+    
+     lockBoard=false;
+   }, 975);
+   playerLives--
+   playerLifeCount.textContent= playerLives
  }
+
+ 
+
+ 
  function resetBoard() {
     [hasFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];
