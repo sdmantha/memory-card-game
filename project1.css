@@ -50,6 +50,7 @@ h1{
 
 
 .card{
+    transform-style: preserve-3d;
     background-color:#333;
     padding:30px;
     border-radius:10px;
@@ -59,10 +60,11 @@ h1{
     height: 200px;
     width: 200;
     transform: scale(1); 
-    transform-style: preserve-3d;
+    
     transition: transform .5s;
      
   }
+  
 
 .back-face, .front-face{
     position: absolute;
@@ -70,7 +72,11 @@ h1{
     
    }
 
-
+   .back-face{
+    transform: rotateY(180deg);
+  }
+  
+/* this was to just adjust the size when its clicked */
   .card:active{
     transform: scale(0.97);
     transition: transform .2s;
@@ -80,13 +86,6 @@ h1{
   .card.flip{
     transform: rotateY(180deg);
   }
-
-
-   
-  .front-face{
-    transform: rotateY(180deg);
-  }
-
 
   img{
     height:165px;
