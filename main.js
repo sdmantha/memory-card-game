@@ -1,26 +1,25 @@
 const cards = document.querySelectorAll('.card');
 const playerLifeCount= document.querySelector("span")
-let playerLives= 3;
+let playerLives= 20;
 
 playerLifeCount.textContent= playerLives;
+
 
   let hasFlippedCard = false;
   let firstCard, secondCard;
   let lockBoard=false;
 
+
   function flipCard() {
     if(lockBoard) return;
     if (this === firstCard) return;
     this.classList.add('flip');
-
     if (!hasFlippedCard) {
       hasFlippedCard = true;
       firstCard = this;
      return;
    }
-
    secondCard = this;
-
    checkForMatch();
  }
 
@@ -41,21 +40,13 @@ playerLifeCount.textContent= playerLives;
    setTimeout(() => {
      firstCard.classList.remove('flip');
      secondCard.classList.remove('flip');
-    
-     //lockBoard = false;
      resetBoard();
    }, 975);
    playerLives--;
    if (playerLives=== 0){
      alert("Game Over!");
      }
-   playerLifeCount.textContent= playerLives;
-  //  if (playerLives=== 0){
-  //   resetBoard();
-  //  }
-  
-
-   
+   playerLifeCount.textContent= playerLives;   
  }
 
 
@@ -66,6 +57,7 @@ playerLifeCount.textContent= playerLives;
     
   }
 
+
  (function shuffle() {
    cards.forEach(card => {
      let ramdomPos = Math.floor(Math.random() * 12);
@@ -74,3 +66,6 @@ playerLifeCount.textContent= playerLives;
  })();
 
   cards.forEach(card => card.addEventListener('click', flipCard));
+
+  //add module for game over
+  //reset game state, maybe put it insid eof the module 

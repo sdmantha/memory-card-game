@@ -1,5 +1,8 @@
 *{
-    margin:0; 
+    background-image: url(/backgroundpic.jpg);
+    background-size: cover;
+    background-repeat: no repeat;
+  margin:0; 
     padding:0;
     box-sizing:border-box;
     background-color: rgb(128, 147, 128);
@@ -11,11 +14,13 @@ h1{
     text-align: center;
     margin-top: 10px;
     padding:20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.912);
     width: 800px;
     position: relative;
     left:345px;
-    border-radius: 45px;  
+    border-radius: 45px; 
+    font-weight: bold ;
+    
       
   }
   
@@ -24,11 +29,12 @@ h1{
     text-align: center;
     margin-top: 10px;
     padding:20px;
-    background: white;
+    background: rgba(255, 255, 255, 0.91);
     width: 800px;
     position: relative;
     left:345px;
-    border-radius: 45px;  
+    border-radius: 45px; 
+  
     }
 
 
@@ -36,7 +42,7 @@ h1{
     margin: 20px auto;
     width: 1000px;
     height:800px;
-    background-color:#fff;
+    background-color: rgba(24, 36, 10, 0.708);
     display:grid;
     grid-template-columns: 200px 200px 200px 200px;
     grid-row: auto auto;
@@ -45,13 +51,14 @@ h1{
     padding: 30px 30px ;
     border-radius: 38px;
     perspective: 1000px; 
+    background-image: none; 
            }
 
 
 
 .card{
     transform-style: preserve-3d;
-    background-color:#333;
+    background-color:rgba(84, 72, 78, 0.651);
     padding:30px;
     border-radius:10px;
     display:flex;
@@ -61,9 +68,15 @@ h1{
     width: 200;
     transform: scale(1); 
     transition: transform .5s;
+    background-image: none;
    
      
   }
+span{
+  background-color: rgba(255, 255, 255, 0.054);
+  background-image: none;
+}
+
   
 
 .back-face, .front-face{
@@ -74,6 +87,10 @@ h1{
 
    .back-face{
     transform: rotateY(180deg);
+  }
+  .front-face{
+    border-radius: 55px;
+    opacity: 0.769;
   }
   
 /* this was to just adjust the size when its clicked */
@@ -93,7 +110,11 @@ h1{
     border-radius: 20%;
     }
   button{
-    background-color: #333;
+    background-color: rgba(186, 149, 174, 0.786);
     color: white;
-    
+    width: 150px;
+    height: 60 px;
+    font-size: 26px;
+    border-color: white;
+
   }
