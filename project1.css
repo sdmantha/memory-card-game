@@ -9,7 +9,7 @@
     font-family:'Great Vibes', cursive;
   }
 
-
+ 
 h1{
     text-align: center;
     margin-top: 10px;
@@ -23,6 +23,17 @@ h1{
     
       
   }
+  
+   h2{
+    font-size: 150px;
+    color: white;
+    position: center;
+    right: 30px;
+    bottom: 500px;
+    text-align: center;
+    /* margin: 250px 50px; */
+
+  } 
   
 
 #btn{
@@ -109,8 +120,8 @@ span{
     width: 165px;
     border-radius: 20%;
     }
+
   button{
-    background-color: rgba(186, 149, 174, 0.786);
     color: white;
     width: 150px;
     height: 60 px;

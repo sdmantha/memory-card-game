@@ -2,6 +2,7 @@
 const cards = document.querySelectorAll('.card');
 const playerLifeCount= document.querySelector("span")
 let playerLives= 20;
+let counter = 0
 
 //pop up on the screen
 playerLifeCount.textContent= playerLives;
@@ -35,14 +36,22 @@ playerLifeCount.textContent= playerLives;
     let isMatch = firstCard.dataset.match === secondCard.dataset.match;
  isMatch ? disableCards() : unflipCards();
  }
-
+//add counter here bc disable cards check if you had a match, each match adds one to the counter
  function disableCards() {
    firstCard.removeEventListener('click', flipCard);
    secondCard.removeEventListener('click', flipCard);
-
+   counter++
+   if (counter === 6){
+    //this will erase the container in the front and show the words you won
+    document.getElementById('whatever').innerHTML= "You won Boo!";
+    console.log('You win!')
+    document.getElementById('container').style.display = 'none'
+  }
 //called the reset func
    resetBoard();
  }
+
+
 //lockboard will prevent any card flipping before the cards are hidden or match
  function unflipCards() {
     lockBoard =true;
@@ -60,11 +69,8 @@ playerLifeCount.textContent= playerLives;
    playerLifeCount.textContent= playerLives;   
  }
 
- function winBoard(){
-  if (firstCard.dataset.framework === secondCard.dataset.framework){
-    container.style.display="none"
-  }
- }
+
+
 
 //if the hasFlippedCard(not flipped) and lockboard(no cards ) are false and the first and second data match are null then the board can be reset
  function resetBoard() {
@@ -73,6 +79,7 @@ playerLifeCount.textContent= playerLives;
     playerLifeCount.textContent= playerLives;
     
   }
+
 
 //shuffle cards
  (function shuffle() {
@@ -84,5 +91,4 @@ playerLifeCount.textContent= playerLives;
 //called the function
   cards.forEach(card => card.addEventListener('click', flipCard));
 
-  //add module for game over
-  //reset game state, maybe put it inside of the module 
+  
