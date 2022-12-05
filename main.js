@@ -1,7 +1,7 @@
 //create variables and consts
 const cards = document.querySelectorAll('.card');
 const playerLifeCount= document.querySelector("span")
-let playerLives= 20;
+let playerLives= 16;
 let counter = 0
 
 //pop up on the screen
