@@ -92,4 +92,8 @@ h1{
     width: 165px;
     border-radius: 20%;
     }
-  
+  button{
+    background-color: #333;
+    color: white;
+    
+  }
