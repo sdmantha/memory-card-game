@@ -1,8 +1,8 @@
-#Memory Card Game
+# Memory Card Game
 ---
-##Description
+## Description
 ---
-Live demo link: 
+Live demo link: https://sdmantha.github.io/memory-card-game/
 
 This is a front-end web application developed as my first personal project while studying at General Assembly.
 

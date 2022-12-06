@@ -1,7 +1,7 @@
 //create variables and consts
 const cards = document.querySelectorAll('.card');
 const playerLifeCount= document.querySelector("span")
-let playerLives= 16;
+let playerLives= 12;
 let counter = 0
 
 //pop up on the screen
@@ -43,7 +43,7 @@ playerLifeCount.textContent= playerLives;
    counter++
    if (counter === 6){
     //this will erase the container in the front and show the words you won
-    document.getElementById('whatever').innerHTML= "You won Boo!";
+    document.getElementById('whatever').innerHTML= "Yaay you won !";
     console.log('You win!')
     document.getElementById('container').style.display = 'none'
   }
