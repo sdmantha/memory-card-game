@@ -32,7 +32,14 @@ h1{
     bottom: 500px;
     text-align: center;
   } 
-  
+  h3{
+    font-size: 150px;
+    color: white;
+    position: center;
+    
+    bottom: 500px;
+    text-align: center;
+  } 
 
 #btn{
     text-align: center;

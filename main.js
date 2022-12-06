@@ -43,7 +43,7 @@ playerLifeCount.textContent= playerLives;
    counter++
    if (counter === 6){
     //this will erase the container in the front and show the words you won
-    document.getElementById('whatever').innerHTML= "Yaay you won !";
+    document.getElementById('whatever').innerHTML= "You won !";
     console.log('You win!')
     document.getElementById('container').style.display = 'none'
   }
@@ -64,8 +64,13 @@ playerLifeCount.textContent= playerLives;
    //subtract one playerlives(life)
    playerLives--;
    if (playerLives=== 0){
-     alert("Game Over!");
+    //popup of 'you lost' using id
+
+    document.getElementById('lose').innerHTML= "uh oh you lost :(";
+    console.log('You lose')
+    document.getElementById('container').style.display = 'none'
      }
+     
    playerLifeCount.textContent= playerLives;   
  }
 
